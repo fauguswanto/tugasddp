@@ -1,0 +1,117 @@
+package ddp;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Ilham
+ */
+public class QuizDdp {
+    public static void main(String[] ilham){
+        Scanner Input = new Scanner(System.in);
+        int pilih, jumlah;
+        double harga, diskon;
+       
+        System.out.println("*************************************");
+        System.out.println("*           Toko ABC                *");
+        System.out.println("*   Menyediakan Barang HighClass    *");
+        System.out.println("*************************************");       
+        System.out.println();
+        System.out.println("Kami menjual Barang HighClass ");
+        System.out.println();
+        System.out.println("Daftar Belanjaan Toko ABC");
+        System.out.println("\n1. x\n2. y\n3. z\n");
+        System.out.print("Masukan Jenis Barang : ");
+        pilih = Input.nextInt();
+        
+        
+        switch (pilih){
+            case 1 : System.out.println("\nAnda memilih barang x\n"
+                    + "Harga x = Rp 300000/pcs\n"
+                    + "Anda ingin membeli berapa banyak? : ");
+                     jumlah = Input.nextInt();
+                     harga = 300000*jumlah;
+                     if (harga >= 5000000)
+                     {
+                      diskon = 0.10;
+                      System.out.println("Anda mendapatkan diskon 10%");
+                         
+                     }
+                     else if(harga >= 3000000) 
+                     {
+                         diskon = 0.05;
+                         System.out.println("Anda mendapatkan diskon 5%");
+                     }else {
+                             diskon = 0;
+                             System.out.println("Anda Tidak Mendapat Diskon");
+                             }
+                     System.out.println("Total belanja = Rp "+harga);
+                     System.out.println("Diskon sebesar = Rp "+harga*diskon);
+                     
+                     harga = harga-(harga*diskon);
+                     
+                     System.out.println("\nTotal setelah diskon = Rp "+harga);
+                     System.out.println();
+                     System.out.println("TERIMA KASIH");
+                     System.out.println("Telah Berbelanja di Toko ABC!");
+                     break;
+                    
+            case 2 : System.out.println("\nAnda memilih barang y");
+                     System.out.println("\nHarga Barang = Rp 200000/pcs");
+                     System.out.print("Anda Ingin memBeli berapa banyak? : ");
+                     jumlah = Input.nextInt();
+                     harga = 200000*jumlah;
+                     if ( harga >= 5000000)
+                     {
+                         diskon = 0.10;
+                         System.out.println("Anda mendapatkan diskon 10%");
+                    
+                     }
+                     else if (harga >= 3000000)
+                     {
+                         diskon = 0.05;
+                         System.out.println("Anda mendapatkan diskon 5%");
+                     }else {
+                             diskon = 0;
+                             System.out.println("Anda tidak mendapat diskon");
+                             }
+                     System.out.println("Total belanja = Rp "+harga);
+                     System.out.println("Diskon sebesar = Rp "+harga*diskon);
+                     harga = harga-(harga*diskon);
+                     System.out.println("\nTotal belanja = Rp "+harga);
+                     System.out.println();
+                     System.out.println("TERIMA KASIH");
+                     System.out.println("Telah Berbelanja di Toko ABC!");
+                     break;        
+                    
+            case 3 : System.out.println("\nAnda memilih barang z");
+                     System.out.println("\nHarga barang = Rp 100000/pcs");
+                     System.out.print("Anda ingin membeli berapa banyak? : ");
+                     jumlah = Input.nextInt();
+                     harga = 100000*jumlah;
+                     if ( harga >= 5000000)
+                     {
+                         diskon = 0.10;
+                         System.out.println("Anda mendapatkan diskon 10%");
+                     }
+                     else if ( harga >= 300000)
+                     {
+                         diskon = 0.05;
+                         System.out.println("Anda mendapatkan diskon 5%");
+                     }
+                     else {
+                             diskon = 0;
+                             System.out.println("Anda tidak mendapat diskon");
+                             }
+                     System.out.println("Total belanja = Rp "+harga);
+                     System.out.println("Diskon sebesar = Rp "+harga*diskon);
+                     harga = harga - (harga*diskon);
+                     System.out.println("\nTotal belanja = Rp "+harga);
+                     System.out.println();
+                     System.out.println("TERIMA KASIH");
+                     System.out.println("Telah Berbelanja di Toko ABC!");
+                     break;
+            default:
+                    System.out.println("Maaf, format barang tidak sesuai");
+        }
+    }
+}
